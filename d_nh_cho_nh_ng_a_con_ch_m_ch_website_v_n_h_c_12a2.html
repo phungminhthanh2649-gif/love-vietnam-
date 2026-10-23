@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dành cho những đứa con chăm chỉ - Môn Ngữ Văn 12A2 THPT Yên Lãng</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sepia: {
+                            50: '#faf8f3',
+                            100: '#f4efe4',
+                            200: '#e8dec9',
+                            300: '#d7c7a7',
+                            400: '#c3ad84',
+                            800: '#433422',
+                            900: '#281e13',
+                        },
+                        ink: {
+                            light: '#2d4059',
+                            DEFAULT: '#1b2a4a',
+                            dark: '#0f172a',
+                        },
+                        warm: {
+                            gold: '#b8860b',
+                            amber: '#d97706',
+                            rose: '#a73a3a',
+                            green: '#2d6a4f'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Lora', 'Merriweather', 'serif'],
+                        handwriting: ['Caveat', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #faf8f3;
+            color: #281e13;
+            font-family: 'Lora', serif;
+            background-image: radial-gradient(#d7c7a7 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+        .vintage-border {
+            border: 2px solid #d7c7a7;
+            outline: 1px solid #b8860b;
+            outline-offset: -6px;
+        }
+        .paper-shadow {
+            box-shadow: 0 10px 30px -5px rgba(67, 52, 34, 0.08), 0 4px 6px -2px rgba(67, 52, 34, 0.04);
+        }
+        .glass-card {
+            background: rgba(244, 239, 228, 0.92);
+            backdrop-filter: blur(8px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f4efe4;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c3ad84;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-warm-gold/30 selection:text-ink-dark custom-scrollbar">
+
+    <!-- Header Navigation -->
+    <nav class="sticky top-0 z-40 glass-card border-b border-sepia-300 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <span class="text-3xl text-warm-rose"><i class="fa-solid fa-feather-pointed"></i></span>
+                    <div>
+                        <a href="#" class="font-handwriting text-2xl sm:text-3xl font-bold text-ink hover:text-warm-rose transition block leading-none">
+                            Dành cho những đứa con chăm chỉ
+                        </a>
+                        <span class="text-[11px] font-sans font-semibold text-warm-gold tracking-widest uppercase">Ngữ Văn 12A2 • THPT Yên Lãng</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu Links -->
+                <div class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-sepia-800">
+                    <a href="#about" class="hover:text-warm-rose transition flex items-center gap-1"><i class="fa-solid fa-compass text-xs"></i> Giới Thiệu</a>
+                    <a href="#tac-pham" class="hover:text-warm-rose transition flex items-center gap-1"><i class="fa-solid fa-book-open text-xs"></i> Kho Tác Phẩm (25+)</a>
+                    <a href="#luyen-de" class="hover:text-warm-rose transition flex items-center gap-1"><i class="fa-solid fa-pen-to-square text-xs"></i> Luyện Đề</a>
+                    <a href="#tien-do" class="hover:text-warm-rose transition flex items-center gap-1"><i class="fa-solid fa-chart-line text-xs"></i> Tiến Độ Học Tập</a>
+                    <a href="#nhat-ky" class="hover:text-warm-rose transition flex items-center gap-1"><i class="fa-solid fa-box-archive text-xs"></i> Nhật Ký 12A2</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-sepia-800 hover:text-warm-rose focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-sepia-300 bg-sepia-100 px-4 pt-3 pb-4 space-y-2 text-sm font-medium">
+            <a href="#about" class="block py-2 text-sepia-800 hover:text-warm-rose"><i class="fa-solid fa-compass w-6"></i> Giới Thiệu</a>
+            <a href="#tac-pham" class="block py-2 text-sepia-800 hover:text-warm-rose"><i class="fa-solid fa-book-open w-6"></i> Kho Tác Phẩm Kho Báu</a>
+            <a href="#luyen-de" class="block py-2 text-sepia-800 hover:text-warm-rose"><i class="fa-solid fa-pen-to-square w-6"></i> Góc Luyện Đề Tương Tác</a>
+            <a href="#tien-do" class="block py-2 text-sepia-800 hover:text-warm-rose"><i class="fa-solid fa-chart-line w-6"></i> Tiến Độ Học Tập</a>
+            <a href="#nhat-ky" class="block py-2 text-sepia-800 hover:text-warm-rose"><i class="fa-solid fa-box-archive w-6"></i> Nhật Ký Văn Học 12A2</a>
+        </div>
+    </nav>
+
+    <!-- MAIN BANNER / GIỚI THIỆU WEB -->
+    <section id="about" class="py-10 sm:py-16 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-sepia-100 p-6 sm:p-12 rounded-2xl vintage-border paper-shadow text-center relative overflow-hidden">
+                <!-- Top Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-warm-gold/15 border border-warm-gold/30 text-warm-gold text-xs font-bold tracking-widest uppercase mb-4">
+                    <i class="fa-solid fa-scroll"></i> Ôn Thi THPT Quốc Gia & Chương Trình GDPT Mới
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl font-bold text-ink mb-3 font-serif tracking-tight leading-tight">
+                    "Dành Cho Những Đứa Con Chăm Chỉ"
+                </h1>
+
+                <p class="text-base sm:text-lg italic text-sepia-800 max-w-3xl mx-auto mb-8 font-serif leading-relaxed">
+                    "Văn chương phục vụ cho đời sống, làm cho tâm hồn con người trở nên phong phú, thấu hiểu nhân sinh và tự tin bước qua kỳ thi vượt cấp vĩ đại."
+                </p>
+
+                <!-- Information Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left bg-sepia-50/90 p-5 sm:p-6 rounded-xl border border-sepia-300">
+                    <div class="space-y-1">
+                        <span class="text-xs text-gray-500 font-sans uppercase font-bold tracking-wider">Môn Học</span>
+                        <p class="font-bold text-ink text-base flex items-center gap-2"><i class="fa-solid fa-book text-warm-rose"></i> NGỮ VĂN 12</p>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="text-xs text-gray-500 font-sans uppercase font-bold tracking-wider">Năm Học</span>
+                        <p class="font-bold text-ink text-base flex items-center gap-2"><i class="fa-solid fa-calendar-days text-warm-gold"></i> 2026 – 2027</p>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="text-xs text-gray-500 font-sans uppercase font-bold tracking-wider">Giáo Viên Hướng Dẫn</span>
+                        <p class="font-bold text-ink text-base flex items-center gap-2"><i class="fa-solid fa-chalkboard-user text-warm-rose"></i> Võ Thị Mỹ Ngà</p>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="text-xs text-gray-500 font-sans uppercase font-bold tracking-wider">Học Sinh / Trường</span>
+                        <p class="font-bold text-ink text-base flex items-center gap-2"><i class="fa-solid fa-graduation-cap text-warm-green"></i> 12A2 (2024-2027)</p>
+                        <p class="text-xs text-sepia-800 font-semibold pl-6">THPT Yên Lãng</p>
+                    </div>
+                </div>
+
+                <!-- COUNTDOWN TIMER -->
+                <div class="mt-8 pt-6 border-t border-sepia-300/80">
+                    <h3 class="text-xs font-bold text-ink uppercase tracking-widest mb-3 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-hourglass-half text-warm-gold"></i> Đếm Ngược Kỳ Thi THPT Quốc Gia 2027
+                    </h3>
+                    <div id="countdown" class="flex justify-center items-center gap-2 sm:gap-5">
+                        <div class="flex flex-col items-center bg-sepia-200/80 px-3 py-2 sm:px-4 sm:py-3 rounded-lg min-w-[60px] sm:min-w-[80px]">
+                            <span id="days" class="text-xl sm:text-3xl font-bold text-warm-rose font-mono">00</span>
+                            <span class="text-[10px] sm:text-xs text-sepia-800 font-semibold uppercase">Ngày</span>
+                        </div>
+                        <span class="text-xl font-bold text-sepia-800">:</span>
+                        <div class="flex flex-col items-center bg-sepia-200/80 px-3 py-2 sm:px-4 sm:py-3 rounded-lg min-w-[60px] sm:min-w-[80px]">
+                            <span id="hours" class="text-xl sm:text-3xl font-bold text-warm-rose font-mono">00</span>
+                            <span class="text-[10px] sm:text-xs text-sepia-800 font-semibold uppercase">Giờ</span>
+                        </div>
+                        <span class="text-xl font-bold text-sepia-800">:</span>
+                        <div class="flex flex-col items-center bg-sepia-200/80 px-3 py-2 sm:px-4 sm:py-3 rounded-lg min-w-[60px] sm:min-w-[80px]">
+                            <span id="minutes" class="text-xl sm:text-3xl font-bold text-warm-rose font-mono">00</span>
+                            <span class="text-[10px] sm:text-xs text-sepia-800 font-semibold uppercase">Phút</span>
+                        </div>
+                        <span class="text-xl font-bold text-sepia-800">:</span>
+                        <div class="flex flex-col items-center bg-sepia-200/80 px-3 py-2 sm:px-4 sm:py-3 rounded-lg min-w-[60px] sm:min-w-[80px]">
+                            <span id="seconds" class="text-xl sm:text-3xl font-bold text-warm-rose font-mono">00</span>
+                            <span class="text-[10px] sm:text-xs text-sepia-800 font-semibold uppercase">Giây</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KHO TÁC PHẨM TRỌNG TÂM (SEARCH + FILTER + CARDS) -->
+    <section id="tac-pham" class="py-12 bg-sepia-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-ink font-serif">Kho Tác Phẩm Ôn Thi Trọng Tâm</h2>
+                <p class="text-sm text-sepia-800 mt-1 max-w-2xl mx-auto">Đầy đủ tác phẩm SGK Mới (Kết nối tri thức, Cánh diều, Chân trời sáng tạo) & Chương trình ôn luyện THPTQG</p>
+                <div class="w-20 h-1 bg-warm-gold mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- SEARCH & FILTER TOOLBAR -->
+            <div class="bg-sepia-100 p-4 sm:p-6 rounded-2xl border border-sepia-300 paper-shadow mb-8 space-y-4">
+                <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+                    <!-- Search Input -->
+                    <div class="relative w-full md:w-96">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-sepia-400"></i>
+                        <input type="text" id="search-input" onkeyup="filterWorks()" placeholder="Tìm tên tác phẩm, tác giả..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-sepia-50 border border-sepia-300 text-sm focus:outline-none focus:border-warm-gold text-ink font-medium placeholder-sepia-400">
+                    </div>
+
+                    <!-- Category Filter Buttons -->
+                    <div class="flex flex-wrap items-center gap-1.5 w-full md:w-auto justify-start md:justify-end">
+                        <button onclick="setFilter('all')" class="filter-btn active-filter px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-ink text-white">Tất Cả (<span id="count-all">0</span>)</button>
+                        <button onclick="setFilter('Thơ')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-sepia-200 text-sepia-800 hover:bg-sepia-300">Thơ Ca (<span id="count-tho">0</span>)</button>
+                        <button onclick="setFilter('Văn xuôi')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-sepia-200 text-sepia-800 hover:bg-sepia-300">Văn Xuôi / Ký (<span id="count-van">0</span>)</button>
+                        <button onclick="setFilter('Kịch')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-sepia-200 text-sepia-800 hover:bg-sepia-300">Kịch (<span id="count-kich">0</span>)</button>
+                        <button onclick="setFilter('Chính luận')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-sepia-200 text-sepia-800 hover:bg-sepia-300">Văn Chính Luận (<span id="count-chinhluan">0</span>)</button>
+                        <button onclick="setFilter('fav')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-warm-rose/20 text-warm-rose hover:bg-warm-rose/30"><i class="fa-solid fa-heart mr-1"></i>Đã Yêu Thích</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WORKS GRID -->
+            <div id="works-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Works Cards dynamically rendered by JS -->
+            </div>
+            
+            <div id="no-result" class="hidden text-center py-12 text-sepia-800 italic">
+                <i class="fa-solid fa-box-open text-4xl text-sepia-300 mb-3 block"></i>
+                Không tìm thấy tác phẩm phù hợp với từ khóa của bạn.
+            </div>
+        </div>
+    </section>
+
+    <!-- QUẢN LÝ TIẾN ĐỘ HỌC TẬP -->
+    <section id="tien-do" class="py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-ink font-serif">Bảng Quản Lý Tiến Độ Ôn Tập 12A2</h2>
+                <p class="text-sm text-sepia-800 mt-1">Đánh dấu và theo dõi mức độ thành thạo của bạn đối với từng bài học</p>
+                <div class="w-16 h-1 bg-warm-gold mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <div class="bg-sepia-100 p-6 sm:p-8 rounded-2xl border border-sepia-300 paper-shadow">
+                <!-- Progress Stats Bar -->
+                <div class="mb-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                    <div class="p-4 bg-sepia-50 rounded-xl border border-sepia-200">
+                        <span class="text-xs text-gray-500 uppercase font-bold tracking-wider">Chưa Học</span>
+                        <p id="stat-not-started" class="text-2xl font-bold text-gray-600 font-mono">0</p>
+                    </div>
+                    <div class="p-4 bg-sepia-50 rounded-xl border border-sepia-200">
+                        <span class="text-xs text-warm-amber uppercase font-bold tracking-wider">Đang Học / Ôn Luyện</span>
+                        <p id="stat-studying" class="text-2xl font-bold text-warm-amber font-mono">0</p>
+                    </div>
+                    <div class="p-4 bg-sepia-50 rounded-xl border border-sepia-200">
+                        <span class="text-xs text-warm-green uppercase font-bold tracking-wider">Thành Thạo / Tự Tin</span>
+                        <p id="stat-mastered" class="text-2xl font-bold text-warm-green font-mono">0</p>
+                    </div>
+                </div>
+
+                <!-- Table Container -->
+                <div class="overflow-x-auto max-h-96 custom-scrollbar">
+                    <table class="w-full text-left text-sm text-sepia-800">
+                        <thead class="text-xs uppercase bg-sepia-200/70 text-ink sticky top-0 font-bold">
+                            <tr>
+                                <th class="px-4 py-3">Tác Phẩm</th>
+                                <th class="px-4 py-3">Thể Loại</th>
+                                <th class="px-4 py-3 text-center">Trạng Thái Ôn Tập</th>
+                                <th class="px-4 py-3 text-right">Hành Động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="progress-table-body" class="divide-y divide-sepia-200 font-medium">
+                            <!-- Dynamic Table Rows -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GÓC LUYỆN ĐỀ TRẮC NGHIỆM & ĐỌC HIỂU TƯƠNG TÁC -->
+    <section id="luyen-de" class="py-12 bg-sepia-100/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-ink font-serif">Góc Luyện Đề & Đọc Hiểu Tương Tác</h2>
+                <p class="text-sm text-sepia-800 mt-1">Củng cố kiến thức tác giả, tác phẩm chuẩn cấu trúc THPT Quốc Gia</p>
+                <div class="w-16 h-1 bg-warm-gold mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <div class="bg-sepia-50 p-6 sm:p-8 rounded-2xl border-2 border-sepia-300 paper-shadow">
+                <div id="quiz-container">
+                    <div class="flex items-center justify-between mb-4 border-b border-sepia-200 pb-3">
+                        <span id="quiz-progress" class="text-xs font-bold uppercase text-warm-gold tracking-widest">Câu hỏi 1 / 5</span>
+                        <span id="quiz-score" class="text-xs font-bold text-ink bg-sepia-200 px-3 py-1 rounded-full">Điểm: 0</span>
+                    </div>
+
+                    <h3 id="quiz-question" class="text-lg font-bold text-ink font-serif mb-6"></h3>
+
+                    <div id="quiz-options" class="space-y-3">
+                        <!-- Options generated dynamically -->
+                    </div>
+
+                    <div id="quiz-explanation" class="hidden mt-6 p-4 rounded-xl bg-warm-gold/10 border border-warm-gold/30 text-sm text-sepia-800 leading-relaxed">
+                        <!-- Explanation -->
+                    </div>
+
+                    <div class="mt-6 flex justify-end">
+                        <button id="next-btn" onclick="nextQuestion()" class="hidden px-6 py-2 bg-ink text-white rounded-lg text-sm font-bold hover:bg-ink-dark transition">
+                            Câu Tiếp Theo <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NHẬT KÝ VĂN HỌC 12A2 -->
+    <section id="nhat-ky" class="py-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-ink font-serif">Nhật Ký Văn Học 12A2</h2>
+                <p class="text-sm text-sepia-800 mt-1">Ghi lại kiến thức, đoạn văn tâm đắc hoặc suy ngẫm học tập của con</p>
+                <div class="w-16 h-1 bg-warm-gold mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <!-- Form Nhập -->
+            <div class="bg-sepia-100 p-6 sm:p-8 rounded-xl border border-sepia-300 paper-shadow mb-8">
+                <form id="note-form" onsubmit="saveNote(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-ink mb-1">Tiêu đề ghi chú:</label>
+                        <input type="text" id="note-title" required placeholder="Ví dụ: Dàn ý bài Tây Tiến - Khổ 1..." class="w-full px-4 py-2.5 rounded-lg bg-sepia-50 border border-sepia-300 focus:outline-none focus:border-warm-gold text-sm text-ink">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-ink mb-1">Nội dung dòng nhật ký / Kiến thức quan trọng:</label>
+                        <textarea id="note-content" rows="4" required placeholder="Nhập cảm nhận hoặc đoạn văn hay..." class="w-full px-4 py-2.5 rounded-lg bg-sepia-50 border border-sepia-300 focus:outline-none focus:border-warm-gold text-sm text-ink"></textarea>
+                    </div>
+                    <button type="submit" class="px-6 py-2.5 bg-ink text-white font-semibold text-sm rounded-lg hover:bg-ink-dark transition inline-flex items-center gap-2">
+                        <i class="fa-solid fa-pen"></i> Lưu Dòng Nhật Ký
+                    </button>
+                </form>
+            </div>
+
+            <!-- Danh Sách Ghi Chú -->
+            <div id="notes-list" class="space-y-4">
+                <!-- Notes rendering -->
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL CHI TIẾT TÁC PHẨM FULL (TẤT CẢ THÔNG TIN ÔN THI) -->
+    <div id="work-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-3 sm:p-4">
+        <div class="bg-sepia-50 max-w-3xl w-full max-h-[90vh] rounded-2xl border-2 border-sepia-300 paper-shadow flex flex-col overflow-hidden relative">
+            <!-- Modal Header -->
+            <div class="p-6 bg-sepia-100 border-b border-sepia-300 flex items-start justify-between">
+                <div>
+                    <span id="modal-category" class="text-xs font-bold uppercase tracking-widest text-warm-rose"></span>
+                    <h3 id="modal-title" class="text-2xl sm:text-3xl font-bold text-ink font-serif mt-1"></h3>
+                    <p id="modal-author" class="text-sm text-sepia-800 italic font-medium mt-0.5"></p>
+                </div>
+                <button onclick="closeWorkModal()" class="text-sepia-800 hover:text-warm-rose text-2xl p-1">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="p-6 overflow-y-auto custom-scrollbar space-y-6 text-sepia-900 text-sm leading-relaxed">
+                <!-- Hoàn cảnh sáng tác -->
+                <div class="bg-sepia-100/60 p-4 rounded-xl border border-sepia-200">
+                    <h4 class="font-bold text-ink text-base mb-2 font-serif flex items-center gap-2">
+                        <i class="fa-solid fa-clock-rotate-left text-warm-gold"></i> Hoàn Cảnh Sáng Tác & Xuất Thân
+                    </h4>
+                    <p id="modal-context" class="text-sepia-800"></p>
+                </div>
+
+                <!-- Trích đoạn tiêu biểu -->
+                <div class="bg-sepia-200/40 p-4 rounded-xl border border-sepia-300 italic">
+                    <h4 class="font-bold text-ink text-base mb-2 font-serif not-italic flex items-center gap-2">
+                        <i class="fa-solid fa-quote-left text-warm-rose"></i> Trích Đoạn / Cụm Từ Nhớ Đắt
+                    </h4>
+                    <p id="modal-quote" class="text-sepia-900 font-serif whitespace-pre-line"></p>
+                </div>
+
+                <!-- Dàn ý chi tiết -->
+                <div>
+                    <h4 class="font-bold text-ink text-base mb-2 font-serif flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-warm-green"></i> Dàn Ý Phân Tích Trọng Tâm
+                    </h4>
+                    <div id="modal-outline" class="bg-sepia-100 p-4 rounded-xl border border-sepia-200 whitespace-pre-line"></div>
+                </div>
+
+                <!-- Sơ đồ tư duy dạng sơ đồ chuỗi -->
+                <div>
+                    <h4 class="font-bold text-ink text-base mb-2 font-serif flex items-center gap-2">
+                        <i class="fa-solid fa-sitemap text-warm-amber"></i> Sơ Đồ Tư Duy Chuỗi Luận Điểm
+                    </h4>
+                    <div id="modal-mindmap" class="bg-sepia-100 p-4 rounded-xl border border-sepia-200 flex flex-wrap gap-2 text-xs"></div>
+                </div>
+
+                <!-- Văn mẫu / Cảm nhận đắt giá -->
+                <div>
+                    <h4 class="font-bold text-ink text-base mb-2 font-serif flex items-center gap-2">
+                        <i class="fa-solid fa-feather text-warm-rose"></i> Đoạn Văn Mẫu / Nhận Định Văn Học Đắt
+                    </h4>
+                    <div id="modal-sample" class="bg-sepia-100 p-4 rounded-xl border border-sepia-200 text-sepia-800 leading-relaxed italic"></div>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 bg-sepia-100 border-t border-sepia-300 flex justify-end gap-3">
+                <button onclick="closeWorkModal()" class="px-5 py-2 bg-ink text-white font-medium text-sm rounded-lg hover:bg-ink-dark transition">Đóng Chi Tiết</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-ink text-sepia-100 py-10 border-t border-ink-light">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-3">
+            <p class="font-handwriting text-3xl text-warm-gold">Dành Cho Những Đứa Con Chăm Chỉ</p>
+            <p class="text-sm font-serif text-sepia-200">
+                MÔN NGỮ VĂN • Lớp 12A2 • Khóa 2024 – 2027 • Trường THPT Yên Lãng
+            </p>
+            <p class="text-xs text-sepia-300">
+                Giáo viên hướng dẫn: Võ Thị Mỹ Ngà
+            </p>
+            <div class="pt-4 text-[11px] text-sepia-400">
+                © 2026-2027 Lớp 12A2 THPT Yên Lãng. Tất cả tài liệu ôn luyện được biên soạn chuẩn kiến thức kỳ thi THPTQG.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT DATA & LOGIC SYSTEM -->
+    <script>
+        // 25+ LITERATURE WORKS DATA STORE
+        const worksData = [
+            // Thơ
+            {
+                id: 'tay-tien',
+                title: 'Tây Tiến',
+                author: 'Quang Dũng',
+                category: 'Thơ',
+                context: 'Sáng tác năm 1948 tại Phù Lưu Chanh khi tác giả rời đơn vị Tây Tiến. Tây Tiến là một đơn vị quân đội thành lập đầu năm 1947, địa bàn hoạt động rộng lớn ở miền Tây Bắc.',
+                quote: 'Sài Môn sương lấp đoàn quân mỏi\nMường Lát hoa về trong đêm hơi...\nTây Tiến đoàn binh không mọc tóc\nQuân xanh màu lá dữ oai hùm.',
+                outline: '1. Thiên nhiên miền Tây hùng vĩ, dữ dội nhưng vô cùng thơ mộng.\n2. Hình tượng người lính Tây Tiến với vẻ đẹp hào hùng, bi ai mà không lụy.\n3. Kỷ niệm tình quân dân ấm áp và lời thề gắn bó sâu nặng.',
+                mindmap: ['Nhiệt huyết tuổi trẻ', 'Hùng vĩ dữ dội', 'Lãng mạn thơ mộng', 'Tượng đài bi hùng', 'Tình quân dân sâu nặng'],
+                sample: 'Thơ Quang Dũng không hề né tránh sự gian khổ, thiếu thốn khốc liệt của chiến tranh nhưng qua cái nhìn lãng mạn, hình tượng người lính hiện lên lung linh sắc màu kiên cường, "chiến trường đi chẳng tiếc đời xanh".'
+            },
+            {
+                id: 'viet-bac',
+                title: 'Việt Bắc',
+                author: 'Tố Hữu',
+                category: 'Thơ',
+                context: 'Sáng tác tháng 10/1954 nhân sự kiện Trung ương Đảng và Chính phủ rời chiến khu Việt Bắc về lại Thủ đô Hà Nội sau chiến thắng Điện Biên Phủ.',
+                quote: 'Mình về mình có nhớ ta\nMười lăm năm ấy thiết tha mặn nồng.\nMình về mình có nhớ không\nNhìn cây nhớ núi, nhìn sông nhớ nguồn?',
+                outline: '1. Khúc ca nghĩa tình giữa cán bộ kháng chiến và nhân dân Việt Bắc.\n2. Bức tranh tứ bình thiên nhiên bốn mùa đẹp lộng lẫy.\n3. Khí thế ra trận hào hùng và vai trò trung tâm chiến khu Việt Bắc.',
+                mindmap: ['Kết cấu đối đáp giao duyên', 'Tính dân tộc đậm đà', 'Bức tranh tứ bình', 'Ân tình cách mạng', 'Chủ nghĩa yêu nước'],
+                sample: 'Việt Bắc là kiệt tác thơ trữ tình chính trị. Qua thể thơ lục bát truyền thống, Tố Hữu đã biến tình cảm cách mạng lớn lao thành lời thì thầm tâm sự ân tình như giữa đôi lứa yêu nhau.'
+            },
+            {
+                id: 'dat-nuoc',
+                title: 'Đất Nước (Trích Trường ca Mặt đường khát vọng)',
+                author: 'Nguyễn Khoa Điềm',
+                category: 'Thơ',
+                context: 'Sáng tác năm 1971 tại chiến trường Bình Trị Thiên, thời kỳ cuộc kháng chiến chống Mỹ cứu quốc diễn ra vô cùng khốc liệt.',
+                quote: 'Khi ta lớn lên Đất Nước đã có rồi...\nĐất Nước là nơi em đến trường\nĐất Nước là nơi anh ngóng đợi...\nĐể Đất Nước này là Đất Nước Nhân dân.',
+                outline: '1. Cảm nhận Đất Nước trên các phương diện: Chiều sâu văn hóa, địa lý, lịch sử.\n2. Tưởng niệm những con người vô danh đã làm nên Đất Nước.\n3. Tư tưởng cốt lõi: "Đất Nước của Nhân dân".',
+                mindmap: ['Cảm nhận bình dị', 'Lịch sử & Địa lý', 'Chất liệu văn hóa dân gian', 'Tư tưởng Đất Nước Nhân dân'],
+                sample: 'Nguyễn Khoa Điềm đã mang đến một góc nhìn mới mẻ: Đất Nước không ở đâu xa xôi mà kết tinh trong từng câu ca ca dao, từng phong tục trầu cau và từng thói quen bình dị hàng ngày của nhân dân.'
+            },
+            {
+                id: 'song',
+                title: 'Sóng',
+                author: 'Xuân Quỳnh',
+                category: 'Thơ',
+                context: 'In trong tập "Hoa dọc chiến hào" (1968), viết tại vùng biển Diêm Điền (Thái Bình) trong những năm tháng kháng chiến chống Mỹ.',
+                quote: 'Dữ dội và dịu êm\nỒn ào và lặng lẽ...\nCon sóng dưới lòng sâu\nCon sóng trên mặt nước\nÔi con sóng nhớ bờ\nNgày đêm không ngủ được.',
+                outline: '1. Sự tương đồng giữa hình tượng Sóng và tâm trạng người phụ nữ khi yêu.\n2. Sự trăn trở về nguồn gốc tình yêu và khát vọng thủy chung.\n3. Khát vọng hóa thân vào sóng lớn để tình yêu trở nên vĩnh hằng.',
+                mindmap: ['Hình tượng Sóng & Em', 'Đối lập & Thống nhất', 'Nỗi nhớ da diết', 'Khát vọng vĩnh cửu hóa tình yêu'],
+                sample: 'Sóng là tiếng lòng thổn thức của người phụ nữ khao khát tình yêu chân thành, vừa tràn đầy nữ tính dịu dàng vừa táo bạo, mãnh liệt vươn tới cái vô tận.'
+            },
+            {
+                id: 'dan-guitar-lorca',
+                title: 'Đàn guitar của Lor-ca',
+                author: 'Thanh Thảo',
+                category: 'Thơ',
+                context: 'In trong tập "Khối vuông rubik" (1985). Tác phẩm thể hiện sự xót thương và ngưỡng mộ của Thanh Thảo đối với nhà thơ thiên tài người Tây Ban Nha - Lorca.',
+                quote: 'những tiếng đàn bọt nước\nTây Ban Nha áo áo đỏ hoen hoen...\nkhi tôi chết hãy chôn tôi với cây đàn.',
+                outline: '1. Hình ảnh Lorca cô độc trên hành trình đấu tranh vì tự do và nghệ thuật.\n2. Bi kịch Lorca bị sát hại và biểu tượng tiếng đàn bất tử.\n3. Sự trân trọng của tác giả đối với di sản văn hóa tinh thần.',
+                mindmap: ['Tượng trưng siêu thực', 'Biểu tượng Tiếng đàn', 'Tự do & Nghệ thuật', 'Khát vọng cách tân thơ'],
+                sample: 'Bằng hệ thống hình ảnh tượng trưng siêu thực linh hoạt, Thanh Thảo đã dựng nên tượng đài nghệ sĩ Lorca bất tử với tiếng đàn vang vọng mãi trong không gian.'
+            },
+            {
+                id: 'toi-yeu-em',
+                title: 'Tôi yêu em',
+                author: 'Puskin',
+                category: 'Thơ',
+                context: 'Sáng tác năm 1829, lấy cảm hứng từ tình yêu thầm lặng của tác giả dành cho A.A. Olenina.',
+                quote: 'Tôi yêu em âm thầm, không hy vọng,\nLúc vì e ngại, lúc hậm hực ghen tuông;\nTôi yêu em, yêu chân thành, đằm thắm,\nCầu mong em được người khác yêu thương như tôi đã yêu em.',
+                outline: '1. Nỗi lòng trăn trở và sự kìm nén tình cảm mãnh liệt.\n2. Sự ghen tuông nhẹ nhàng nhưng chân thành.\n3. Tình yêu vị tha, cao thượng dành trọn sự hạnh phúc cho người mình yêu.',
+                mindmap: ['Tình yêu chân thành', 'Kìm nén cảm xúc', 'Sự cao thượng vị tha', 'Tâm hồn quý tộc'],
+                sample: 'Bài thơ thể hiện một vẻ đẹp tâm hồn cao thượng trong tình yêu: Không chiếm đoạt, không thù hận mà luôn mong ước hạnh phúc trọn vẹn nhất cho người mình yêu.'
+            },
+            {
+                id: 'tu-ay',
+                title: 'Từ ấy',
+                author: 'Tố Hữu',
+                category: 'Thơ',
+                context: 'Sáng tác năm 1938 khi Tố Hữu mới 18 tuổi và được kết nạp vào Đảng Cộng sản Việt Nam.',
+                quote: 'Từ ấy trong tôi bừng nắng hạ\nMặt trời chân lý chói qua tim\nHồn tôi là một vườn hoa lá\nRất đậm hương và rộn tiếng chim...',
+                outline: '1. Niềm vui sướng vô bờ khi gặp lý tưởng cách mạng.\n2. Nhận thức mới về lẽ sống: Hòa mình vào quần chúng lao khổ.\n3. Sự chuyển biến sâu sắc trong tình cảm người thanh niên yêu nước.',
+                mindmap: ['Nắng hạ & Chân lý', 'Lý tưởng cách mạng', 'Hòa nhập quần chúng', 'Tâm hồn rực rỡ'],
+                sample: 'Ánh sáng lý tưởng đã làm bừng tỉnh tâm hồn trẻ trung, biến nhà thơ thành một chiến sĩ kiên trung gắn bó máu thịt với nhân dân lao động.'
+            },
+            {
+                id: 'trang-giang',
+                title: 'Tràng giang',
+                author: 'Huy Cận',
+                category: 'Thơ',
+                context: 'Sáng tác mùa thu 1939 khi Huy Cận đứng ở bờ sông Hồng ngắm cảnh chiều tà.',
+                quote: 'Sóng gờn gờn tràng giang buồn điệp điệp\nCon thuyền buông mái nước song song...\nLòng quê dợn dợn bồn bồn\nKhông khói hoàng hôn cũng nhớ nhà.',
+                outline: '1. Bức tranh sông nước rợn ngợp, mênh mông cổ kính.\n2. Nỗi buồn cô đơn, rải rác của kiếp người nhỏ bé.\n3. Tình yêu quê hương đất nước thầm kín của người trí thức.',
+                mindmap: ['Nỗi buồn thời thế', 'Thiên nhiên mênh mông', 'Cổ điển & Hiện đại', 'Lòng quê da diết'],
+                sample: 'Tràng giang mang nét đẹp cổ điển của thơ Đường nhưng đong đầy nỗi buồn bơ vơ, bế tắc của người trí thức tiểu tư sản trước cách mạng.'
+            },
+            {
+                id: 'day-thon-vi-da',
+                title: 'Đây thôn Vĩ Dạ',
+                author: 'Hàn Mặc Tử',
+                category: 'Thơ',
+                context: 'Sáng tác năm 1938, gợi cảm hứng từ tấm bưu thiếp gửi tặng của Hoàng Thị Kim Cúc.',
+                quote: 'Sao anh không về chơi thôn Vĩ?\nNhìn nắng hàng cau nắng mới lên...\nMơ khách đường xa, khách đường xa\nÁo em trắng quá nhìn không ra...',
+                outline: '1. Cảnh ban mai thôn Vĩ trong trẻo, tinh khôi.\n2. Cảnh sông nước đêm trăng u buồn, hoài niệm.\n3. Khát khao tình yêu, cuộc đời trong mơ màng hư ảo.',
+                mindmap: ['Cảnh thôn Vĩ tinh khôi', 'Sông trăng huyền ảo', 'Nỗi cô đơn cào xé', 'Khát khao mưu sinh'],
+                sample: 'Một tiếng lòng đau đớn nhưng tràn đầy khát khao gắn bó với cuộc đời thực tại của nhà thơ tài hoa bạc mệnh Hàn Mặc Tử.'
+            },
+            {
+                id: 'canh-ngay-he',
+                title: 'Cảnh ngày hè (Bảo kính cảnh giới số 43)',
+                author: 'Nguyễn Trãi',
+                category: 'Thơ',
+                context: 'Trích tập "Quốc âm thi tập", viết khi Nguyễn Trãi ở ẩn tại Côn Sơn.',
+                quote: 'Rồi hóng mát ta thanh ngày hạ,\nHòe lục đùn đùn dồn rợp hòe...\nDân giàu đủ khắp bến bãi nương.',
+                outline: '1. Bức tranh thiên nhiên ngày hè tràn đầy sức sống tự nhiên.\n2. Âm thanh cuộc sống nhộn nhịp nơi làng chài.\n3. Tấm lòng "ưu quốc ái dân" canh cánh của Nguyễn Trãi.',
+                mindmap: ['Bức tranh ngày hè', 'Sức sống tràn trề', 'Tấm lòng nhân nghĩa', 'Tình yêu dân sâu sắc'],
+                sample: 'Dù cáo quan về ở ẩn nhưng tấm lòng Nguyễn Trãi chưa bao giờ nguôi lo cho dân, luôn ước mong nhân dân khắp nơi được ấm no, hạnh phúc.'
+            },
+            {
+                id: 'doc-tieu-thanh-ky',
+                title: 'Đọc Tiểu Thanh ký',
+                author: 'Nguyễn Du',
+                category: 'Thơ',
+                context: 'Trích tập "Thanh Hiên thi tập", sáng tác khi Nguyễn Du đọc tập thơ còn sót lại của nàng Tiểu Thanh.',
+                quote: 'Tây Hồ hoa uyển tẫn thành khư,\nĐộc điếu phong tiền nhất chỉ thư...\nBất tri tam bách dư niên hậu,\nTố như thiên hạ hà nhân khấp?',
+                outline: '1. Nỗi xót xa cho số phận tài hoa mà bạc mệnh của nàng Tiểu Thanh.\n2. Tri âm hoài niệm và sự trăn trở về mối hận văn chương.\n3. Khát vọng tìm kiếm người tri âm trong tương lai.',
+                mindmap: ['Số phận tài hoa bạc mệnh', 'Mối hận văn chương', 'Lòng nhân đạo Nguyễn Du', 'Trăn trở tri âm'],
+                sample: 'Bài thơ thể hiện tư tưởng nhân đạo bao la của Nguyễn Du: Xót thương không chỉ cho người xưa mà còn trăn trở về số phận của chính mình.'
+            },
+
+            // Văn xuôi / Ký
+            {
+                id: 'vo-nhat',
+                title: 'Vợ nhặt',
+                author: 'Kim Lân',
+                category: 'Văn xuôi',
+                context: 'In trong tập "Con chó xấu xí" (1962), tiền thân là tiểu thuyết "Xóm ngụ cư" viết sau Cách mạng tháng Tám.',
+                quote: 'Giữa cái tối sầm lại vì đói khát, người ta không nghĩ đến cái chết mà nghĩ đến sự sống.\nÁnh sáng của ngọn đèn dầu xua tan bóng tối xóm ngụ cư.',
+                outline: '1. Tình huống truyện lạ kỳ: Anh Tràng nhặt được vợ giữa ngày đói tàn khốc.\n2. Diễn biến tâm trạng nhân vật Tràng, cụ Tứ và người vợ nhặt.\n3. Ánh sáng hi vọng và niềm tin vào tương lai cách mạng.',
+                mindmap: ['Tình huống truyện độc đáo', 'Bức tranh ngày đói 1945', 'Tình người ấm áp', 'Khát vọng sống mãnh liệt'],
+                sample: 'Kim Lân đã chứng minh một thực tế cảm động: Ngay trên bờ vực của cái chết, con người Việt Nam vẫn hướng về sự sống, vẫn yêu thương và đùm bọc lẫn nhau.'
+            },
+            {
+                id: 'vo-chong-a-phu',
+                title: 'Vợ chồng A Phủ',
+                author: 'Tô Hoài',
+                category: 'Văn xuôi',
+                context: 'In trong tập "Truyện Tây Bắc" (1953), kết quả của chuyến đi thực tế cùng bộ đội suốt 8 tháng.',
+                quote: 'Mị lùi lũi như con rùa nuôi trong xó cửa...\nNhưng đêm xuân đến, Mị thấy phơi phới trở lại, Mị còn trẻ, Mị muốn đi chơi.',
+                outline: '1. Số phận đau khổ, bị bóc xót sức lao động và đày đọa tâm hồn của Mị & A Phủ.\n2. Sức sống tiềm tàng trỗi dậy trong đêm xuân và đêm đông cởi chói.\n3. Hành trình tự giải phóng bản thân tìm đến cách mạng.',
+                mindmap: ['Bi kịch làm dâu gạt nợ', 'Sức sống tiềm tàng', 'Đêm đông cứu A Phủ', 'Con đường giải phóng'],
+                sample: 'Tác phẩm thể hiện cái nhìn nhân đạo sâu sắc của Tô Hoài: Khai quật sức sống mãnh liệt ẩn sau vẻ ngoài vô cảm của người dân lao động Tây Bắc.'
+            },
+            {
+                id: 'chiec-thuyen-nguoi-xa',
+                title: 'Chiếc thuyền ngoài xa',
+                author: 'Nguyễn Minh Châu',
+                category: 'Văn xuôi',
+                context: 'Sáng tác năm 1983, in trong tập truyện ngắn cùng tên (1987) - thời kỳ văn học đổi mới.',
+                quote: 'Nghệ thuật không thể là ánh trăng lừa dối, không nên là ánh trăng lừa dối...\nBối cảnh tòa án huyện và câu chuyện người đàn bà chài lưới.',
+                outline: '1. Hai phát hiện của nghệ sĩ Phùng ở bờ biển.\n2. Câu chuyện cay đắng nhưng thấu hiểu của người đàn bà ở tòa án huyện.\n3. Chiêm nghiệm về mối quan hệ giữa nghệ thuật và cuộc đời thực tại.',
+                mindmap: ['Hai phát hiện Phùng', 'Nghệ thuật & Cuộc đời', 'Sự đa chiều nhân sinh', 'Tấm lòng người mẹ'],
+                sample: 'Nguyễn Minh Châu nhắc nhở người nghệ sĩ không được nhìn cuộc đời một cách đơn giản, dễ dắt mà phải đi sâu khám phá bản chất đa chiều đằng sau vẻ bề ngoài.'
+            },
+            {
+                id: 'nguoi-lai-do-song-da',
+                title: 'Người lái đò Sông Đà',
+                author: 'Nguyễn Tuân',
+                category: 'Văn xuôi',
+                context: 'In trong tập tùy bút "Sông Đà" (1960), quả ngọt của chuyến đi thực tế gian khổ lên miền Tây Bắc.',
+                quote: 'Đập sông Đà hung bạo như kẻ thù số một...\nSông Đà trữ tình như một mỹ nhân: "dải lụa mây mùa thu...", "màu xanh ngọc bích".',
+                outline: '1. Hình tượng Sông Đà vừa hung bạo dữ dội vừa thơ mộng trữ tình.\n2. Hình tượng ông lái đò như một tay lái ra hoa, tay chèo nghệ sĩ.\n3. Ca ngợi "thứ vàng mười đã qua thử lửa" của người lao động.',
+                mindmap: ['Thùy thể Sông Đà', 'Hung bạo & Trữ tình', 'Trận chiến thạch trận', 'Tài hoa nghệ sĩ'],
+                sample: 'Với vốn từ vựng giàu có và tri thức đa ngành, Nguyễn Tuân đã biến trận chiến vượt thác sông Đà thành một thiên anh hùng ca lộng lẫy.'
+            },
+            {
+                id: 'ai-da-dat-ten-cho-dong-song',
+                title: 'Ai đã đặt tên cho dòng sông?',
+                author: 'Hoàng Ngọc Phủ',
+                category: 'Văn xuôi',
+                context: 'Viết tại Huế năm 1981, in trong tập bút ký cùng tên.',
+                quote: 'Sông Hương như một cô gái Di-gan phóng khoáng và man dại...\nKhi chảy qua Huế, Sông Hương như điệu slow tình cảm dành riêng cho xứ Huế.',
+                outline: '1. Sông Hương ở thượng nguồn: Sức sống mãnh liệt, hoang dại.\n2. Sông Hương khi về với đồng bằng và ngoại vi xứ Huế.\n3. Sông Hương trong chiều sâu lịch sử và văn hóa xứ Huế.',
+                mindmap: ['Thượng nguồn phóng khoáng', 'Thơ mộng xứ Huế', 'Lịch sử & Dân tộc', 'Phong cách bút ký tài hoa'],
+                sample: 'Dòng sông Hương dưới ngòi bút Hoàng Ngọc Phủ không chỉ là địa lý mà trở thành một dòng sông văn hóa, lịch sử mang tâm hồn người thiếu nữ Huế.'
+            },
+            {
+                id: 'chi-pheo',
+                title: 'Chí Phèo',
+                author: 'Nam Cao',
+                category: 'Văn xuôi',
+                context: 'Sáng tác năm 1941, tác phẩm kiệt xuất của dòng văn học thực tế lãng mạn.',
+                quote: 'Ai cho tao làm người lương thiện?\nLàm sao cho mất được những vết mảnh chai trên mặt này?',
+                outline: '1. Bi kịch tha hóa, lưu manh hóa của Chí Phèo do nhà tù kiến tạo.\n2. Bát cháo hành Thị Nở và quá trình thức tỉnh bản tính người.\n3. Bi kịch bị từ chối quyền làm người và cái chết đớn đau.',
+                mindmap: ['Bi kịch tha hóa', 'Bát cháo hành tình người', 'Khát vọng lương thiện', 'Tiếng kêu xé ruột'],
+                sample: 'Nam Cao đã thể hiện niềm tin sâu sắc vào bản chất tốt đẹp của người nông dân: Ngay cả khi bị cướp đi cả hình hài lẫn tâm hồn, khát vọng lương thiện vẫn chưa bao giờ dập tắt.'
+            },
+            {
+                id: 'hanh-phuc-mot-tang-gia',
+                title: 'Hạnh phúc một tang gia (Trích Số đỏ)',
+                author: 'Vũ Trọng Phụng',
+                category: 'Văn xuôi',
+                context: 'Trích chương XV tiểu thuyết "Số đỏ" (1936), đỉnh cao của nghệ thuật trào phúng.',
+                quote: 'Cái chết của cụ cố tổ làm cho nhiều người sung sướng lắm...\nMột đám tang to tát, nhộn nhịp như một đám rươi.',
+                outline: '1. Niềm hạnh phúc vô lý của các thành viên trong gia đình khi cụ cố tổ chết.\n2. Đám đông rước tang lố lăng, đạo đức giả.\n3. Nghệ thuật trào phúng sắc bén, đả kích giới thượng lưu Hà Thành.',
+                mindmap: ['Niềm vui tang gia', 'Bức tranh trào phúng', 'Đám tang lố lăng', 'Đạo đức giả'],
+                sample: 'Vũ Trọng Phụng đã phơi bày bộ mặt thối nát, bịt mắt bốc phét của xã hội thượng lưu thành thị những năm trước cách mạng.'
+            },
+            {
+                id: 'rung-xa-nu',
+                title: 'Rừng xà nu',
+                author: 'Nguyễn Trung Thành',
+                category: 'Văn xuôi',
+                context: 'Sáng tác năm 1965, viết tại chiến trường Trung Trung Bộ thời kỳ kháng chiến chống Mỹ.',
+                quote: 'Cây xà nu ham ánh sáng mặt trời...\nChúng nó đã cầm súng, mình phải cầm giáo!',
+                outline: '1. Hình tượng cây xà nu biểu tượng cho sức sống kiên cường của nhân dân Tây Nguyên.\n2. Cuộc đời bi hùng của Tnú và đôi bàn tay mười ngón bốc cháy.\n3. Chân lý cách mạng: Dùng bạo lực cách mạng đè bẹp bạo lực phản động.',
+                mindmap: ['Biểu tượng Cây xà nu', 'Số phận Tnú', 'Đôi bàn tay lịch sử', 'Chân lý đánh Mỹ'],
+                sample: 'Truyện mang đậm bản anh hùng ca Tây Nguyên, khẳng định sức sống bất diệt và tinh thần bất khuất của dân tộc trước kẻ thù.'
+            },
+            {
+                id: 'hai-dua-tre',
+                title: 'Hai đứa trẻ',
+                author: 'Thạch Nam',
+                category: 'Văn xuôi',
+                context: 'Trích tập "Nắng trong vườn" (1938), truyện ngắn trữ tình đặc sắc không có cốt truyện.',
+                quote: 'Chiều, chiều rồi. Một chiều êm ả như ru...\nChuyến tàu đêm đi qua phố huyện mang theo ánh sáng rực rỡ và những âm thanh từ thế giới khác.',
+                outline: '1. Bức tranh phố huyện lúc chiều tà u buồn và tàn lụi.\n2. Kiếp người nhỏ bé, quẩn quanh trong bóng tối.\n3. Khát vọng đợi tàu đêm mang theo ánh sáng và sự sống.',
+                mindmap: ['Bức tranh chiều tàn', 'Bóng tối & Ánh sáng', 'Chuyến tàu đêm hy vọng', 'Văn phong trữ tình'],
+                sample: 'Thạch Nam đã gieo vào lòng người đọc niềm xót thương sâu sắc cho những kiếp người tàn nhẫn và niềm trân trọng những ước mơ thầm kín.'
+            },
+            {
+                id: 'mua-la-roi-trong-vuon',
+                title: 'Mùa lá rơi trong vườn',
+                author: 'Ma Văn Kháng',
+                category: 'Văn xuôi',
+                context: 'Viết năm 1985, phản ánh những biến động văn hóa gia đình thời kỳ đầu Đổi mới.',
+                quote: 'Căn nhà cổ phố cổ Hà Nội và không khí cúng chiều 30 Tết...',
+                outline: '1. Không khí đầm ấm nhưng chứa đựng rạn nứt của gia đình ông Bằng.\n2. Nhân vật Chị Cần: Người phụ nữ vun vén, lưu giữ nếp nhà truyền thống.\n3. Sự xung đột giữa giá trị truyền thống và xu hướng thị trường.',
+                mindmap: ['Xung đột văn hóa', 'Bữa cơm chiều 30 Tết', 'Giữ gìn truyền thống', 'Đổi mới xã hội'],
+                sample: 'Tác phẩm giông lên hồi chuông về việc giữ gìn bản sắc văn hóa và tình cảm gia đình trước những làn sóng đô thị hóa.'
+            },
+            {
+                id: 'muoi-cua-rung',
+                title: 'Muối của rừng (SGK Mới)',
+                author: 'Nguyễn Huy Thiệp',
+                category: 'Văn xuôi',
+                context: 'Sáng tác năm 1986, thuộc bộ sách SGK Mới (Kết nối tri thức / Cánh diều).',
+                quote: 'Ông Diểu đi săn trong rừng xuân... Hành động phóng sinh chú khỉ con và sự thức tỉnh bản tính nhân văn.',
+                outline: '1. Chuyến đi săn đầy bản năng của ông Diểu trong rừng xuân.\n2. Quá trình săn đuổi gia đình khỉ và sự mệt mỏi về thể xác lẫn tinh thần.\n3. Sự thức tỉnh lương tri: Buông súng, phóng sinh khỉ và sự xuất hiện của hoa muối.',
+                mindmap: ['Hành trình săn bắn', 'Tâm lý ông Diểu', 'Sự thức tỉnh nhân tính', 'Biểu tượng Hoa Muối'],
+                sample: 'Muối của rừng là bài ca về sự hòa hợp giữa con người và thiên nhiên, thức tỉnh lòng nhân ái ẩn sâu trong bản chất con người.'
+            },
+
+            // Kịch
+            {
+                id: 'hon-truong-ba',
+                title: 'Hồn Trương Ba, da hàng thịt',
+                author: 'Lưu Quang Vũ',
+                category: 'Kịch',
+                context: 'Viết năm 1981, công chiếu năm 1984, đỉnh cao kịch bản kịch hiện đại Việt Nam.',
+                quote: 'Tôi muốn được là tôi toàn vẹn...\nKhông thể bên trong một đằng, bên ngoài một nẻo được.',
+                outline: '1. Bi kịch Trương Ba khi phải sống nhờ thân xác gã hàng thịt thô lậu.\n2. Màn đối thoại giữa Hồn và Xác, giữa Trương Ba và người thân.\n3. Quyết định trả xác, chấp nhận cái chết để tâm hồn vẹn toàn.',
+                mindmap: ['Bên trong & Bên ngoài', 'Màn đối thoại Hồn - Xác', 'Sự tha hóa tâm hồn', 'Triết lý sống toàn vẹn'],
+                sample: 'Vở kịch mang thông điệp nhân sinh sâu sắc: Sống thật với chính mình, hài hòa giữa thể xác và tâm hồn mới mang lại hạnh phúc chân thực.'
+            },
+            {
+                id: 'vu-nhu-to',
+                title: 'Vĩnh biệt Cửu Trùng Đài (Trích Vũ Như Tô)',
+                author: 'Nguyễn Huy Tưởng',
+                category: 'Kịch',
+                context: 'Viết năm 1941, vỡ kịch kịch lịch sử 5 hồi xuất sắc.',
+                quote: 'Cửu Trùng Đài cháy! Vũ Như Tô bị dẫn ra pháp trường.',
+                outline: '1. Bi kịch của người nghệ sĩ tài ba đam mê sáng tạo nghệ thuật vượt khỏi thực tế.\n2. Mâu thuẫn giữa khát vọng nghệ thuật muôn đời và quyền lợi nhân dân.\n3. Cái chết bi thương của Vũ Như Tô và sự sụp đổ của Cửu Trùng Đài.',
+                mindmap: ['Nghệ thuật & Nhân dân', 'Mâu thuẫn giai cấp', 'Bi kịch sáng tạo', 'Cửu Trùng Đài rực cháy'],
+                sample: 'Vũ Như Tô vừa đáng trách vừa đáng thương: Một thiên tài nghệ thuật không nhận ra rằng nghệ thuật chân chính không thể xây trên sự đau khổ của nhân dân.'
+            },
+
+            // Văn chính luận
+            {
+                id: 'tuyen-ngon-doc-lap',
+                title: 'Tuyên ngôn Độc lập',
+                author: 'Hồ Chí Minh',
+                category: 'Chính luận',
+                context: 'Đọc ngày 2/9/1945 tại Quảng trường Ba Đình, Hà Nội, khai sinh ra nước Việt Nam Dân chủ Cung hòa.',
+                quote: 'Tất cả mọi người sinh ra đều có quyền bình đẳng...\nNước Việt Nam có quyền hưởng tự do và độc lập, và sự thật đã thành một nước tự do độc lập.',
+                outline: '1. Cơ sở pháp lý và thực tiễn của bản Tuyên ngôn.\n2. Vạch trần tội ác thực dân Pháp và khẳng định thực tế đấu tranh của dân tộc.\n3. Lời thề quyết tâm giữ vững nền tự do, độc lập.',
+                mindmap: ['Cơ sở pháp lý', 'Cơ sở thực tiễn', 'Lời tuyên bố độc lập', 'Văn phong chính luận mẫu mực'],
+                sample: 'Bản Tuyên ngôn là một áng văn chính luận mẫu mực với lập luận chặt chẽ, lý lẽ sắc bén và tình cảm yêu nước cháy bỏng.'
+            },
+            {
+                id: 'binh-ngo-dai-cao',
+                title: 'Bình Ngô đại cáo / Nguyễn Trãi',
+                author: 'Nguyễn Trãi',
+                category: 'Chính luận',
+                context: 'Công bố đầu năm 1428 sau khi đại thắng quân Minh, giải phóng hoàn toàn đất nước.',
+                quote: 'Việc nhân nghĩa cốt ở yên dân\nQuân phạt bộc trước lo trừ giặc...\nĐộc ác khống trúc Nam Sơn không ghi hết tội,\nTrô bẩn lấy nước Đông Hải không rửa sạch mùi.',
+                outline: '1. Tư tưởng nhân nghĩa và khẳng định chủ quyền dân tộc.\n2. Vạch trần tội ác man rợ của giặc Minh.\n3. Quá trình gian khổ và chiến thắng oanh liệt của nghĩa quân Lam Sơn.',
+                mindmap: ['Tư tưởng Nhân Nghĩa', 'Chủ quyền dân tộc', 'Tội ác giặc Minh', 'Khúc ca chiến thắng'],
+                sample: 'Bản thiên cổ hùng văn khẳng định ý chí tự cường dân tộc, nêu cao triết lý nhân nghĩa lấy dân làm gốc của Đại Việt.'
+            }
+        ];
+
+        // QUIZ DATA STORE
+        const quizData = [
+            {
+                q: "Bài thơ 'Tây Tiến' của Quang Dũng được sáng tác trong hoàn cảnh nào?",
+                options: [
+                    "A. Khi tác giả đang chiến đấu cùng đoàn quân Tây Tiến tại Mường Lát.",
+                    "B. Năm 1948 tại Phù Lưu Chanh khi tác giả đã chuyển sang đơn vị khác.",
+                    "C. Năm 1954 sau khi chiến thắng Điện Biên Phủ lừng lẫy.",
+                    "D. Mùa thu năm 1947 tại chiến khu Việt Bắc."
+                ],
+                correct: 1,
+                exp: "Tây Tiến được Quang Dũng viết năm 1948 tại làng Phù Lưu Chanh (Hà Đông cũ) khi ông chia tay đơn vị cũ Tây Tiến để chuyển sang đơn vị mới."
+            },
+            {
+                q: "Tư tưởng cốt lõi của bài thơ 'Đất Nước' (Nguyễn Khoa Điềm) là gì?",
+                options: [
+                    "A. Đất Nước là sự kết tinh của lịch sử các triều đại.",
+                    "B. Đất Nước thuộc về thế hệ thanh niên trí thức.",
+                    "C. Đất Nước của Nhân dân.",
+                    "D. Đất Nước là vùng không gian anh hùng vĩ đại."
+                ],
+                correct: 2,
+                exp: "Tư tưởng quy tụ của toàn bộ đoạn trích là 'Đất Nước này là Đất Nước Nhân dân' - do nhân dân làm ra và gìn giữ."
+            },
+            {
+                q: "Trong truyện ngắn 'Chiếc thuyền ngoài xa', nghệ sĩ Phùng đã rút ra bài học gì ở tòa án huyện?",
+                options: [
+                    "A. Cần phải trừng trị thẳng tay người đàn ông bạo lực.",
+                    "B. Nghệ thuật chỉ cần đẹp là đủ.",
+                    "C. Không thể nhìn đời đơn giản, phải có cái nhìn đa chiều về con người.",
+                    "D. Người đàn bà chài lưới là người thiếu hiểu biết."
+                ],
+                correct: 2,
+                exp: "Phùng nhận ra câu chuyện cuộc đời phức tạp đằng sau vẻ ngoài chài lưới, nhắc nhở không được nhìn nhận con người một cách hời hợt, đơn giản."
+            },
+            {
+                q: "Tác phẩm nào trong SGK Mới mô tả cuộc săn đuổi trong rừng và sự thức tỉnh nhân văn?",
+                options: [
+                    "A. Vợ chồng A Phủ",
+                    "B. Muối của rừng (Nguyễn Huy Thiệp)",
+                    "C. Rừng xà nu",
+                    "D. Người lái đò Sông Đà"
+                ],
+                correct: 1,
+                exp: "'Muối của rừng' của Nguyễn Huy Thiệp là tác phẩm tiêu biểu trong chương trình mới, khắc họa sự thức tỉnh tình thương thiên nhiên của ông Diểu."
+            },
+            {
+                q: "Mâu thuẫn trung tâm trong đoạn trích 'Vĩnh biệt Cửu Trùng Đài' (Vũ Như Tô) là gì?",
+                options: [
+                    "A. Mâu thuẫn giữa nhân dân và kẻ thù ngoại xâm.",
+                    "B. Mâu thuẫn giữa khát vọng nghệ thuật muôn đời và lợi ích thực tế của nhân dân.",
+                    "C. Mâu thuẫn giữa tình yêu lứa đôi và nhiệm vụ đất nước.",
+                    "D. Mâu thuẫn giữa thi ca truyền thống và hiện đại."
+                ],
+                correct: 1,
+                exp: "Vũ Như Tô đứng trước bi kịch giữa ước mơ sáng tạo cái đẹp vĩnh cửu và sự lầm than, hao tốn sức người sức của của nhân dân."
+            }
+        ];
+
+        // LOCAL STORAGE SYSTEM INITIALIZATION
+        let userProgress = JSON.parse(localStorage.getItem('12a2_progress')) || {};
+        let userFavorites = JSON.parse(localStorage.getItem('12a2_favorites')) || [];
+        let currentFilter = 'all';
+
+        // INIT SYSTEM ON LOAD
+        window.onload = function() {
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            renderWorks();
+            renderProgressTable();
+            updateProgressStats();
+            loadQuiz();
+            loadNotes();
+        };
+
+        // RENDER WORKS GRID
+        function renderWorks() {
+            const grid = document.getElementById('works-grid');
+            const searchVal = document.getElementById('search-input').value.toLowerCase();
+            let countAll = 0, countTho = 0, countVan = 0, countKich = 0, countChinhLuan = 0;
+
+            // Update Counts
+            worksData.forEach(w => {
+                countAll++;
+                if (w.category === 'Thơ') countTho++;
+                if (w.category === 'Văn xuôi') countVan++;
+                if (w.category === 'Kịch') countKich++;
+                if (w.category === 'Chính luận') countChinhLuan++;
+            });
+
+            document.getElementById('count-all').innerText = countAll;
+            document.getElementById('count-tho').innerText = countTho;
+            document.getElementById('count-van').innerText = countVan;
+            document.getElementById('count-kich').innerText = countKich;
+            document.getElementById('count-chinhluan').innerText = countChinhLuan;
+
+            grid.innerHTML = '';
+            let visibleCount = 0;
+
+            worksData.forEach(w => {
+                const matchesSearch = w.title.toLowerCase().includes(searchVal) || w.author.toLowerCase().includes(searchVal);
+                let matchesCategory = false;
+
+                if (currentFilter === 'all') matchesCategory = true;
+                else if (currentFilter === 'fav') matchesCategory = userFavorites.includes(w.id);
+                else matchesCategory = (w.category === currentFilter);
+
+                if (matchesSearch && matchesCategory) {
+                    visibleCount++;
+                    const isFav = userFavorites.includes(w.id);
+                    const status = userProgress[w.id] || 'Chưa học';
+
+                    let badgeColor = 'bg-sepia-200 text-sepia-800';
+                    if (status === 'Đang học') badgeColor = 'bg-warm-amber/20 text-warm-amber border border-warm-amber/30';
+                    if (status === 'Thành thạo') badgeColor = 'bg-warm-green/20 text-warm-green border border-warm-green/30';
+
+                    const card = document.createElement('div');
+                    card.className = "bg-sepia-50 p-6 rounded-xl border border-sepia-300 paper-shadow hover:-translate-y-1 transition duration-300 flex flex-col justify-between relative";
+                    card.innerHTML = `
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-warm-rose bg-warm-rose/10 px-2.5 py-0.5 rounded-md">${w.category}</span>
+                                <button onclick="toggleFavorite('${w.id}')" class="text-lg transition ${isFav ? 'text-warm-rose' : 'text-sepia-300 hover:text-warm-rose'}">
+                                    <i class="fa-solid fa-heart"></i>
+                                </button>
+                            </div>
+                            <h3 class="text-xl font-bold text-ink font-serif mb-0.5">${w.title}</h3>
+                            <p class="text-xs text-sepia-800 italic font-semibold mb-3">${w.author}</p>
+                            <p class="text-xs text-sepia-800 line-clamp-3 mb-4 leading-relaxed">${w.context}</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between pt-3 border-t border-sepia-200 text-xs">
+                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${badgeColor}">${status}</span>
+                                <button onclick="openWorkModal('${w.id}')" class="font-bold text-warm-gold hover:underline inline-flex items-center gap-1">
+                                    Chi tiết bài học <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                }
+            });
+
+            document.getElementById('no-result').classList.toggle('hidden', visibleCount > 0);
+        }
+
+        // FILTER BUTTON CLICK
+        function setFilter(cat) {
+            currentFilter = cat;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-ink', 'text-white');
+                btn.classList.add('bg-sepia-200', 'text-sepia-800');
+            });
+            event.currentTarget.classList.remove('bg-sepia-200', 'text-sepia-800');
+            event.currentTarget.classList.add('bg-ink', 'text-white');
+            renderWorks();
+        }
+
+        function filterWorks() {
+            renderWorks();
+        }
+
+        // FAVORITE TOGGLE
+        function toggleFavorite(id) {
+            if (userFavorites.includes(id)) {
+                userFavorites = userFavorites.filter(item => item !== id);
+            } else {
+                userFavorites.push(id);
+            }
+            localStorage.setItem('12a2_favorites', JSON.stringify(userFavorites));
+            renderWorks();
+        }
+
+        // WORK MODAL DETAILS
+        function openWorkModal(id) {
+            const w = worksData.find(item => item.id === id);
+            if (!w) return;
+
+            document.getElementById('modal-category').innerText = w.category;
+            document.getElementById('modal-title').innerText = w.title;
+            document.getElementById('modal-author').innerText = "Tác giả: " + w.author;
+            document.getElementById('modal-context').innerText = w.context;
+            document.getElementById('modal-quote').innerText = w.quote;
+            document.getElementById('modal-outline').innerText = w.outline;
+            document.getElementById('modal-sample').innerText = w.sample;
+
+            // Mindmap rendering
+            const mapContainer = document.getElementById('modal-mindmap');
+            mapContainer.innerHTML = w.mindmap.map((item, idx) => `
+                <span class="px-3 py-1 bg-warm-gold/15 text-ink font-bold rounded-lg border border-warm-gold/30 flex items-center gap-1">
+                    <span class="text-warm-rose">${idx + 1}.</span> ${item}
+                </span>
+            `).join('');
+
+            document.getElementById('work-modal').classList.remove('hidden');
+        }
+
+        function closeWorkModal() {
+            document.getElementById('work-modal').classList.add('hidden');
+        }
+
+        // PROGRESS TABLE & STATS
+        function renderProgressTable() {
+            const tbody = document.getElementById('progress-table-body');
+            tbody.innerHTML = worksData.map(w => {
+                const currentStatus = userProgress[w.id] || 'Chưa học';
+                return `
+                    <tr class="hover:bg-sepia-50/80 transition">
+                        <td class="px-4 py-3 font-bold text-ink">${w.title} <span class="text-xs font-normal text-sepia-800">(${w.author})</span></td>
+                        <td class="px-4 py-3 text-xs font-semibold text-warm-rose">${w.category}</td>
+                        <td class="px-4 py-3 text-center">
+                            <select onchange="updateWorkStatus('${w.id}', this.value)" class="text-xs font-bold px-2.5 py-1 rounded-lg border border-sepia-300 bg-sepia-50 text-ink focus:outline-none">
+                                <option value="Chưa học" ${currentStatus === 'Chưa học' ? 'selected' : ''}>Chưa học</option>
+                                <option value="Đang học" ${currentStatus === 'Đang học' ? 'selected' : ''}>Đang học / Ôn luyện</option>
+                                <option value="Thành thạo" ${currentStatus === 'Thành thạo' ? 'selected' : ''}>Thành thạo / Tự tin</option>
+                            </select>
+                        </td>
+                        <td class="px-4 py-3 text-right">
+                            <button onclick="openWorkModal('${w.id}')" class="text-xs font-bold text-warm-gold hover:underline">
+                                Xem lại
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function updateWorkStatus(id, value) {
+            userProgress[id] = value;
+            localStorage.setItem('12a2_progress', JSON.stringify(userProgress));
+            updateProgressStats();
+            renderWorks();
+        }
+
+        function updateProgressStats() {
+            let notStarted = 0, studying = 0, mastered = 0;
+            worksData.forEach(w => {
+                const st = userProgress[w.id] || 'Chưa học';
+                if (st === 'Chưa học') notStarted++;
+                if (st === 'Đang học') studying++;
+                if (st === 'Thành thạo') mastered++;
+            });
+
+            document.getElementById('stat-not-started').innerText = notStarted;
+            document.getElementById('stat-studying').innerText = studying;
+            document.getElementById('stat-mastered').innerText = mastered;
+        }
+
+        // QUIZ LOGIC
+        let currentQuizIdx = 0;
+        let score = 0;
+
+        function loadQuiz() {
+            const q = quizData[currentQuizIdx];
+            document.getElementById('quiz-progress').innerText = `Câu hỏi ${currentQuizIdx + 1} / ${quizData.length}`;
+            document.getElementById('quiz-score').innerText = `Điểm: ${score}`;
+            document.getElementById('quiz-question').innerText = q.q;
+
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = q.options.map((opt, idx) => `
+                <button onclick="checkAnswer(${idx})" class="quiz-opt-btn w-full text-left p-3.5 rounded-xl border border-sepia-300 bg-sepia-50 hover:bg-sepia-200/60 text-sm font-medium text-sepia-900 transition flex items-center justify-between">
+                    <span>${opt}</span>
+                    <i class="fa-regular fa-circle text-sepia-400"></i>
+                </button>
+            `).join('');
+
+            document.getElementById('quiz-explanation').classList.add('hidden');
+            document.getElementById('next-btn').classList.add('hidden');
+        }
+
+        function checkAnswer(selectedIdx) {
+            const q = quizData[currentQuizIdx];
+            const buttons = document.querySelectorAll('.quiz-opt-btn');
+
+            buttons.forEach((btn, idx) => {
+                btn.disabled = true;
+                if (idx === q.correct) {
+                    btn.classList.add('bg-green-100', 'border-green-500', 'text-green-900', 'font-bold');
+                } else if (idx === selectedIdx) {
+                    btn.classList.add('bg-red-100', 'border-red-500', 'text-red-900');
+                }
+            });
+
+            if (selectedIdx === q.correct) {
+                score += 20;
+                document.getElementById('quiz-score').innerText = `Điểm: ${score}`;
+            }
+
+            const expBox = document.getElementById('quiz-explanation');
+            expBox.innerHTML = `<strong>Giải thích chi tiết:</strong> ${q.exp}`;
+            expBox.classList.remove('hidden');
+
+            document.getElementById('next-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuizIdx++;
+            if (currentQuizIdx < quizData.length) {
+                loadQuiz();
+            } else {
+                document.getElementById('quiz-container').innerHTML = `
+                    <div class="text-center py-8 space-y-4">
+                        <i class="fa-solid fa-trophy text-5xl text-warm-gold"></i>
+                        <h3 class="text-2xl font-bold text-ink font-serif">Hoàn Thành Bài Luyện Đề!</h3>
+                        <p class="text-lg text-sepia-800">Tổng điểm của bạn: <strong class="text-warm-rose">${score} / 100</strong></p>
+                        <button onclick="resetQuiz()" class="px-6 py-2.5 bg-ink text-white font-bold rounded-lg text-sm hover:bg-ink-dark transition">Luyện Lại Bài Khác</button>
+                    </div>
+                `;
+            }
+        }
+
+        function resetQuiz() {
+            currentQuizIdx = 0;
+            score = 0;
+            location.reload();
+        }
+
+        // COUNTDOWN TIMER
+        const examDate = new Date('June 25, 2027 07:30:00').getTime();
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = examDate - now;
+
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = days < 10 ? '0' + days : days;
+                document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
+                document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
+                document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+            }
+        }
+
+        // NOTES LOCAL STORAGE
+        function loadNotes() {
+            const list = document.getElementById('notes-list');
+            const notes = JSON.parse(localStorage.getItem('12a2_notes')) || [];
+
+            if (notes.length === 0) {
+                list.innerHTML = `<p class="text-center text-sm text-sepia-800 italic py-4">Chưa có dòng nhật ký nào. Hãy tạo ghi chú ôn tập đầu tiên của con!</p>`;
+                return;
+            }
+
+            list.innerHTML = notes.map((n, i) => `
+                <div class="bg-sepia-100 p-5 rounded-xl border border-sepia-300 paper-shadow relative">
+                    <button onclick="deleteNote(${i})" class="absolute top-3 right-3 text-sepia-400 hover:text-warm-rose text-sm">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                    <h4 class="font-bold text-ink font-serif text-lg">${n.title}</h4>
+                    <p class="text-[11px] text-warm-gold font-semibold mb-2">${n.date}</p>
+                    <p class="text-sm text-sepia-900 whitespace-pre-line leading-relaxed">${n.content}</p>
+                </div>
+            `).join('');
+        }
+
+        function saveNote(e) {
+            e.preventDefault();
+            const title = document.getElementById('note-title').value;
+            const content = document.getElementById('note-content').value;
+            const date = new Date().toLocaleDateString('vi-VN', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+            const notes = JSON.parse(localStorage.getItem('12a2_notes')) || [];
+            notes.unshift({ title, content, date });
+            localStorage.setItem('12a2_notes', JSON.stringify(notes));
+
+            document.getElementById('note-form').reset();
+            loadNotes();
+        }
+
+        function deleteNote(i) {
+            const notes = JSON.parse(localStorage.getItem('12a2_notes')) || [];
+            notes.splice(i, 1);
+            localStorage.setItem('12a2_notes', JSON.stringify(notes));
+            loadNotes();
+        }
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
